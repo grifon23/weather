@@ -1,0 +1,48 @@
+.card {
+    padding: 15px 15px 0 15px;
+    min-width: 250px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    max-width: 380px;
+    box-shadow: 10px 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.cardTitle {
+    font-family: Gilroy;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 25px;
+    color: #7b6e6e;
+    margin-bottom: 0px;
+}
+
+.clouds {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textContent {
+    color: #7b6e6e;
+    font-family: Gilroy;
+}
+
+td {
+    text-align: center;
+    vertical-align: bottom;
+    padding-bottom: 15px;
+}
+
+tr,
+td:first-child {
+    text-align: left;
+}

@@ -1,0 +1,9 @@
+.containerPage {
+    background-image: url("../../assets/image/blueSky.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center;
+    height: 100vh;
+    padding: 20px 50px;
+}
