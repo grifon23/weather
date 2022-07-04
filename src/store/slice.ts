@@ -1,4 +1,4 @@
-import { ICity, IListCities } from "./../shared/interfaces/cityInterface";
+import { ICity } from "./../shared/interfaces/cityInterface";
 import { createSlice } from "@reduxjs/toolkit";
 import { thunks } from "./thunks";
 

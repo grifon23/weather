@@ -1,0 +1,35 @@
+.detailPage {
+    background-image: url("../../assets/image/downSun.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center;
+    height: 100vh;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weatherContent {
+    color: #FFFF;
+    font-size: 30px;
+
+
+}
+.itemList {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.valueWeather {
+color: #FFFF;
+font-size: 35px;
+font-weight: 600;    
+margin-left: 20px;
+}

@@ -1,0 +1,11 @@
+.emptyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyText {
+    color: rgb(129, 127, 124);
+    font-size: 35px;
+    font-weight: 500;
+}

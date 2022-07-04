@@ -4,46 +4,32 @@ import { BtnDel } from "../../shared/components/buttons/BtnDel";
 import { Row } from "../../shared/components/table/row";
 import { ReactComponent as IconRefresh } from "../../assets/icons/iconRefresh.svg";
 import "./style.css";
+import { ICity } from "./../../shared/interfaces/cityInterface";
 
 interface IProps {
-  id: number;
-  name: string;
-  temperature: number;
-  weather: {
-    main: string;
-    description: string;
-    icon: string;
-  };
-  wind: {
-    speed: number;
-    deg: number;
-  };
+  card: ICity;
   delCard: (id: number) => void;
   refresh: () => void;
 }
-export const Card: FC<IProps> = ({
-  id,
-  name,
-  weather,
-  wind,
-  temperature,
-  delCard,
-  refresh,
-}) => {
+export const Card: FC<IProps> = ({ card, delCard, refresh }) => {
   return (
-    <div key={id} className="card">
+    <div key={card.id} className="card">
       <div className="header-card">
-        <h2 className="cardTitle">{name}</h2>
+        <h2 className="cardTitle">{card.name}</h2>
         <div style={{ display: "flex", alignItems: "center" }}>
           <IconRefresh height={18} style={{ opacity: 0.4 }} onClick={refresh} />
-          <BtnDel onClick={() => delCard(id)} />
+          <BtnDel onClick={() => delCard(card.id)} />
         </div>
       </div>
-      <Link to={"detailed"} style={{ textDecoration: "none" }}>
+      <Link
+        state={card}
+        to={{ pathname: "detailed" }}
+        style={{ textDecoration: "none" }}
+      >
         <table>
           <Row
             title="Tamperature:"
-            value={`${temperature.toFixed()} ℃`}
+            value={`${card.temperature.temp.toFixed()} ℃`}
             icon={
               <img
                 src={require("../../assets/icons/iconThermometer.svg").default}
@@ -52,18 +38,18 @@ export const Card: FC<IProps> = ({
             }
           />
           <Row
-            title={weather.main}
-            value={weather.description}
+            title={card.weather.main}
+            value={card.weather.description}
             icon={
               <img
-                src={`http://openweathermap.org/img/w/${weather.icon}.png`}
+                src={`http://openweathermap.org/img/w/${card.weather.icon}.png`}
                 height={30}
               />
             }
           />
           <Row
             title="Wind:"
-            value={`speed: ${wind.speed}`}
+            value={`speed: ${card.wind.speed}`}
             icon={
               <img
                 src={require("../../assets/icons/iconWind.svg").default}

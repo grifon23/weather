@@ -3,11 +3,11 @@ import "./style.css";
 interface IProps {
   onChange: (e: any) => void;
   value: string;
-  getCity: (e: any) => void;
+  onSubmit: (e: any) => void;
 }
-export const FormCity: FC<IProps> = ({ onChange, value, getCity }) => {
+export const FormCity: FC<IProps> = ({ onChange, value, onSubmit }) => {
   return (
-    <form className="form" onSubmit={(e) => getCity(e)}>
+    <form className="form" onSubmit={onSubmit}>
       <input
         value={value}
         onChange={(e) => onChange(e)}
@@ -15,7 +15,7 @@ export const FormCity: FC<IProps> = ({ onChange, value, getCity }) => {
         type="text"
         placeholder="...enter city"
       />
-      <button type="submit" className="btn btn-primary" style={{}}>
+      <button type="submit" className="btn btn-primary">
         Add city
       </button>
     </form>
