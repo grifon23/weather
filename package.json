@@ -2,6 +2,7 @@
     "name": "weather",
     "version": "0.1.0",
     "private": true,
+      "homepage": "https://grifon23.github.io/weather/",
     "dependencies": {
         "@reduxjs/toolkit": "^1.8.3",
         "@testing-library/jest-dom": "^5.16.4",
@@ -23,6 +24,8 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -47,6 +50,7 @@
         ]
     },
     "devDependencies": {
-        "@types/lodash": "^4.14.182"
+        "@types/lodash": "^4.14.182",
+        "gh-pages": "^4.0.0"
     }
 }
