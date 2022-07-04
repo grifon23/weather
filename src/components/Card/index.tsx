@@ -23,7 +23,7 @@ export const Card: FC<IProps> = ({ card, delCard, refresh }) => {
       </div>
       <Link
         state={card}
-        to={{ pathname: "weather/detailed" }}
+        to={{ pathname: "detailed/" }}
         style={{ textDecoration: "none" }}
       >
         <table>
