@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="https://grifon23.github.io/weather/">
       <App />
     </Router>
   </React.StrictMode>
