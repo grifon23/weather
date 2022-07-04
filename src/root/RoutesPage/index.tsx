@@ -5,7 +5,7 @@ import { Home } from "../../pages/Home";
 export const RoutesPage = () => {
   return (
     <Routes>
-      <Route path="weather/" element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="detailed/" element={<Detailed />} />
     </Routes>
   );
